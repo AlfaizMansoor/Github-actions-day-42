@@ -1,0 +1,16 @@
+name: self-hosted
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    self:
+        runs-on: self-hosted
+        steps:
+            - name: my runner
+              run: |
+                hostname
+                pwd
+                touch my-self-hosted-runner.txt
+                [ -f my-self-hosted-runner.txt ] && echo "Exists"
