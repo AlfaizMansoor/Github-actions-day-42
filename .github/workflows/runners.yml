@@ -1,0 +1,24 @@
+name: runners
+
+on: 
+    push:
+        branches: [main]
+
+jobs:
+    check-one:
+        runs-on: ubuntu-latest
+        steps:
+            - name: ubuntu runner
+              run: echo "Check one completed"
+
+    check-two:
+        runs-on: windows-latest
+        steps: 
+            - name: windows runner
+              run: Write-Host "Check two completed"
+
+    check-three:
+        runs-on: macos-latest
+        steps:
+            - name: macos runner
+              run: echo "Check three completed"
