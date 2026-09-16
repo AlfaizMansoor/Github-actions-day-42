@@ -13,7 +13,7 @@ jobs:
 
             - name: Versions check
               run: |
-                docker --verion
+                docker --version
                 python3 --version
                 node --verion
                 git --version
