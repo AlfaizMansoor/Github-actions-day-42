@@ -11,6 +11,13 @@ jobs:
             - name: ubuntu runner
               run: echo "Check one completed"
 
+            - name: Versions check
+              run: |
+                docker --verion
+                python3 --version
+                node --verion
+                git --version
+
     check-two:
         runs-on: windows-latest
         steps: 
